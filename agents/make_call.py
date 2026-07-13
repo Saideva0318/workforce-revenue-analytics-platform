@@ -25,8 +25,9 @@ TWIML_SCRIPT = """
   <Pause length="12"/>
   <Say voice="Polly.Joanna" rate="90%">
     Hi Sai Deva! This is Aria, the AI Recruitment Assistant calling on behalf
-    of the Talent Acquisition team at Workforce Analytics Corp.
+    of the Talent Acquisition team at Laksan Technologies LLC.
     I hope I am not catching you at a bad time.
+    <Pause length="2"/>
     We have a few quick screening questions for the Senior Data Engineer position.
     This will only take about 5 minutes.
   </Say>

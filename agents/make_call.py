@@ -17,7 +17,7 @@ TO_NUMBER   = os.environ["TWILIO_TO_NUMBER"]
 # TwiML voice script - read aloud by Twilio text-to-speech (Amazon Polly)
 TWIML_SCRIPT = """
 <Response>
-  <Pause length="20"/>
+  <Pause length="15"/>
   <Say voice="Polly.Joanna" rate="90%">
     Hello! May I please speak with Sai Deva Puttur?
   </Say>

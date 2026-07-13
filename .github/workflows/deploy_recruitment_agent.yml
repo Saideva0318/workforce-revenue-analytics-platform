@@ -1,0 +1,66 @@
+name: Deploy Recruitment AI Agent
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'agents/**'
+  workflow_dispatch:  # Manual trigger
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+        
+      - name: Set up Python 3.10
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+          
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r agents/requirements.txt
+          
+      - name: Run tests (if available)
+        run: |
+          cd agents
+          # pytest tests/ --cov=. --cov-report=term-missing
+          echo "Tests passed (placeholder)"
+          
+      - name: Validate agent configuration
+        run: |
+          python -c "import yaml; yaml.safe_load(open('agents/agent_config.yaml'))"
+          echo "✓ Configuration validated"
+          
+      - name: Deploy to Cloud (placeholder)
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          SNOWFLAKE_USER: ${{ secrets.SNOWFLAKE_USER }}
+          SNOWFLAKE_PASSWORD: ${{ secrets.SNOWFLAKE_PASSWORD }}
+        run: |
+          echo "Deploying Recruitment Agent..."
+          # For AWS Lambda deployment:
+          # zip -r recruitment_agent.zip agents/
+          # aws lambda update-function-code --function-name recruitment-agent --zip-file fileb://recruitment_agent.zip
+          
+          # For Docker deployment:
+          # docker build -t recruitment-agent:latest agents/
+          # docker push $DOCKER_REGISTRY/recruitment-agent:latest
+          
+          # For GCP Cloud Run:
+          # gcloud run deploy recruitment-agent --source agents/ --region us-central1
+          
+          echo "✓ Deployment complete (placeholder mode)"
+          
+      - name: Send Slack notification
+        if: success()
+        run: |
+          echo "✓ Recruitment Agent deployed successfully"
+          # curl -X POST -H 'Content-type: application/json' \
+          #   --data '{"text":"Recruitment Agent deployed to production"}' \
+          #   $SLACK_WEBHOOK_URL

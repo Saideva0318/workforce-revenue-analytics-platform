@@ -23,7 +23,7 @@ TWIML_SCRIPT = """
   </Say>
   <Pause length="6"/>
   <Say voice="Polly.Joanna" rate="90%">
-    Hi Dananjaya! This is Aria, the AI Recruitment Assistant calling on behalf
+    Hi Dananjaya! This is Aria, the AI Assistant calling on behalf
     of the Talent Acquisition team at Kashiv biosciences.
     I hope I am not catching you at a bad time.
   </Say>

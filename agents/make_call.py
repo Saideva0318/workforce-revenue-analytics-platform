@@ -18,11 +18,11 @@ TO_NUMBER    = os.environ["TWILIO_TO_NUMBER"]
 # TwiML voice script - read aloud by Twilio text-to-speech (Amazon Polly)
 TWIML_SCRIPT = """
 <Response>
-  <Pause length="1"/>
+  <Pause length="3"/>
   <Say voice="Polly.Joanna" rate="90%">
     Hello! May I please speak with Sai Deva Puttur?
   </Say>
-  <Pause length="2"/>
+  <Pause length="3"/>
   <Say voice="Polly.Joanna" rate="90%">
     Hi Sai Deva! This is Aria, the AI Recruitment Assistant calling on behalf
     of the Talent Acquisition team at Workforce Analytics Corp.
@@ -30,37 +30,37 @@ TWIML_SCRIPT = """
     We have a few quick screening questions for the Senior Data Engineer position.
     This will only take about 5 minutes.
   </Say>
-  <Pause length="1"/>
+  <Pause length="3"/>
   <Say voice="Polly.Joanna" rate="90%">
     Question 1. Can you describe your hands-on experience with Snowflake and dbt?
     Have you built data models or transformations using these tools in a production environment?
   </Say>
-  <Pause length="8"/>
+  <Pause length="10"/>
   <Say voice="Polly.Joanna" rate="90%">
     Thank you. Question 2. Can you walk me through how you have designed
     an ETL or ELT pipeline end to end?
     What tools did you use and what was the data volume?
   </Say>
-  <Pause length="8"/>
+  <Pause length="10"/>
   <Say voice="Polly.Joanna" rate="90%">
     Great. Question 3. Tell me about a time you optimized a slow SQL query or pipeline.
     What was the problem and how did you fix it?
   </Say>
-  <Pause length="8"/>
+  <Pause length="10"/>
   <Say voice="Polly.Joanna" rate="90%">
     Question 4. What is your experience with Apache Airflow?
     Have you written DAGs and managed pipeline failures?
   </Say>
-  <Pause length="8"/>
+  <Pause length="10"/>
   <Say voice="Polly.Joanna" rate="90%">
     Question 5. Are you open to hybrid or on-site work in New Jersey?
     And what is your current work authorization status?
   </Say>
-  <Pause length="6"/>
+  <Pause length="8"/>
   <Say voice="Polly.Joanna" rate="90%">
     Last question. What is your expected salary range for a Senior Data Engineer role?
   </Say>
-  <Pause length="6"/>
+  <Pause length="8"/>
   <Say voice="Polly.Joanna" rate="90%">
     Wonderful, Sai Deva! Thank you so much for your time today.
     Based on your responses, our recruiting team will follow up within 2 business days
@@ -68,7 +68,7 @@ TWIML_SCRIPT = """
     You will receive a calendar invite at your registered email address.
     Have a great afternoon and we look forward to speaking with you again!
   </Say>
-  <Pause length="1"/>
+  <Pause length="2"/>
 </Response>
 """
 

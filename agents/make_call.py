@@ -4,16 +4,15 @@ Recruitment AI Agent - Make Call Script
 Places a real Twilio voice call to Sai Deva Puttur with Data Engineer screening questions.
 Credentials loaded from environment variables / GitHub Actions Secrets.
 """
-
 import os
 import sys
 from twilio.rest import Client
 
 # Credentials loaded from environment variables (set as GitHub Secrets)
-ACCOUNT_SID  = os.environ["TWILIO_ACCOUNT_SID"]
-AUTH_TOKEN   = os.environ["TWILIO_AUTH_TOKEN"]
-FROM_NUMBER  = os.environ["TWILIO_FROM_NUMBER"]
-TO_NUMBER    = os.environ["TWILIO_TO_NUMBER"]
+ACCOUNT_SID = os.environ["TWILIO_ACCOUNT_SID"]
+AUTH_TOKEN  = os.environ["TWILIO_AUTH_TOKEN"]
+FROM_NUMBER = os.environ["TWILIO_FROM_NUMBER"]
+TO_NUMBER   = os.environ["TWILIO_TO_NUMBER"]
 
 # TwiML voice script - read aloud by Twilio text-to-speech (Amazon Polly)
 TWIML_SCRIPT = """
@@ -27,7 +26,9 @@ TWIML_SCRIPT = """
     Hi Sai Deva! This is Aria, the AI Recruitment Assistant calling on behalf
     of the Talent Acquisition team at Laksan Technologies LLC.
     I hope I am not catching you at a bad time.
-    <Pause length="2"/>
+  </Say>
+  <Pause length="2"/>
+  <Say voice="Polly.Joanna" rate="90%">
     We have a few quick screening questions for the Senior Data Engineer position.
     This will only take about 5 minutes.
   </Say>
@@ -70,8 +71,7 @@ TWIML_SCRIPT = """
     Have a great afternoon and we look forward to speaking with you again!
   </Say>
   <Pause length="1"/>
-</Response>
-"""
+</Response>"""
 
 def make_screening_call():
     """Place Twilio outbound voice call to the candidate."""
@@ -84,7 +84,6 @@ def make_screening_call():
     print("=" * 60)
 
     client = Client(ACCOUNT_SID, AUTH_TOKEN)
-
     call = client.calls.create(
         twiml=TWIML_SCRIPT,
         to=TO_NUMBER,

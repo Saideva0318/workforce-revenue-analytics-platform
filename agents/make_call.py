@@ -31,7 +31,7 @@ TWIML_SCRIPT = """
     We have a few quick screening questions for the Senior Data Engineer position.
     This will only take about 5 minutes.
   </Say>
-  <Pause length="10"/>
+  <Pause length="6"/>
   <Say voice="Polly.Joanna" rate="90%">
     Question 1. Can you describe your hands-on experience with Snowflake and dbt?
     Have you built data models or transformations using these tools in a production environment?

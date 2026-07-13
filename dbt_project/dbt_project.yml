@@ -1,0 +1,80 @@
+# dbt_project.yml
+# Workforce & Revenue Analytics Data Platform
+# Author: Sai Puttur | Database Engineer
+# Updated: July 2026
+
+name: 'workforce_analytics'
+version: '1.0.0'
+config-version: 2
+
+profile: 'workforce_analytics'
+
+model-paths: ['models']
+analysis-paths: ['analyses']
+test-paths: ['tests']
+seed-paths: ['seeds']
+macro-paths: ['macros']
+snapshot-paths: ['snapshots']
+
+target-path: 'target'
+clean-targets:
+  - 'target'
+  - 'dbt_packages'
+
+models:
+  workforce_analytics:
+    # Staging models - raw source cleanup
+    staging:
+      +materialized: view
+      +schema: staging
+      +tags: ['staging']
+
+    # Intermediate models - business logic layer
+    intermediate:
+      +materialized: ephemeral
+      +schema: intermediate
+      +tags: ['intermediate']
+
+    # Marts - dimension and fact tables (curated layer)
+    marts:
+      dimensions:
+        +materialized: table
+        +schema: analytics
+        +tags: ['dimensions', 'marts']
+      facts:
+        +materialized: incremental
+        +schema: analytics
+        +tags: ['facts', 'marts']
+        +on_schema_change: 'sync_all_columns'
+
+vars:
+  # Platform metadata
+  platform_name: 'Workforce & Revenue Analytics Data Platform'
+  data_engineer: 'Sai Puttur'
+  environment: "{{ env_var('DBT_ENVIRONMENT', 'development') }}"
+
+  # Business rule thresholds
+  utilization_target_pct: 75
+  invoice_aging_buckets:
+    - '0-30'
+    - '31-60'
+    - '61-90'
+    - '90+'
+  target_fill_days: 45
+
+  # Source system identifiers
+  hris_source: 'HRIS_WORKDAY'
+  ats_source: 'ATS_GREENHOUSE'
+  erp_source: 'ERP_NETSUITE'
+  timesheet_source: 'OPS_HARVEST'
+
+snapshots:
+  workforce_analytics:
+    +target_schema: snapshots
+    +strategy: timestamp
+    +updated_at: updated_at
+
+seeds:
+  workforce_analytics:
+    +schema: seeds
+    +quote_columns: false

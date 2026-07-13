@@ -1,7 +1,6 @@
 # Python Dependencies for Recruitment AI Agent
 
 # Core
-python==3.10
 
 # AI & NLP
 openai==1.3.7

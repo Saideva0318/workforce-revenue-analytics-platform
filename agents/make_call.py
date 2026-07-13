@@ -36,22 +36,13 @@ TWIML_SCRIPT = """
   <Say voice="Polly.Joanna" rate="90%">
     Question 1. Can you describe how is your 1st day of the work production environment?
   </Say>
-  <Pause length="10"/>
+  <Pause length="15"/>
   <Say voice="Polly.Joanna" rate="90%">
     Thank you. Question 2. Can you walk me through your Onboarding process how they treated you?
   </Say>
-  <Pause length="10"/>
+  <Pause length="15"/>
   <Say voice="Polly.Joanna" rate="90%">
-    Question 4. why are you planning to take a car instead of bycycle?
-  </Say>
-  <Pause length="10"/>
-  <Say voice="Polly.Joanna" rate="90%">
-    Question 5. Are you open to hybrid or on-site work in New Jersey?
-    And what is your current work authorization status?
-  </Say>
-  <Pause length="10"/>
-  <Say voice="Polly.Joanna" rate="90%">
-    Last question. What is your expected salary range for a Senior Data Engineer role?
+    Question 3. why are you planning to take a car instead of bycycle?
   </Say>
   <Pause length="10"/>
   <Say voice="Polly.Joanna" rate="90%">

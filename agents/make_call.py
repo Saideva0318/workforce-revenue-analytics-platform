@@ -19,39 +19,30 @@ TWIML_SCRIPT = """
 <Response>
   <Pause length="15"/>
   <Say voice="Polly.Joanna" rate="90%">
-    Hello! May I please speak with Sai Deva Puttur?
+    Hello! May I please speak with Dhananjaya Sirasati?
   </Say>
   <Pause length="15"/>
   <Say voice="Polly.Joanna" rate="90%">
-    Hi Sai Deva! This is Aria, the AI Recruitment Assistant calling on behalf
-    of the Talent Acquisition team at Laksan Technologies LLC.
+    Hi Dananjaya! This is Aria, the AI Recruitment Assistant calling on behalf
+    of the Talent Acquisition team at Kashiv biosciences.
     I hope I am not catching you at a bad time.
   </Say>
   <Pause length="2"/>
   <Say voice="Polly.Joanna" rate="90%">
-    We have a few quick screening questions for the Senior Data Engineer position.
+    We have a few quick questions for the todays Onboarding.
     This will only take about 5 minutes.
   </Say>
   <Pause length="6"/>
   <Say voice="Polly.Joanna" rate="90%">
-    Question 1. Can you describe your hands-on experience with Snowflake and dbt?
-    Have you built data models or transformations using these tools in a production environment?
+    Question 1. Can you describe how is your 1st day of the work production environment?
   </Say>
   <Pause length="10"/>
   <Say voice="Polly.Joanna" rate="90%">
-    Thank you. Question 2. Can you walk me through how you have designed
-    an ETL or ELT pipeline end to end?
-    What tools did you use and what was the data volume?
+    Thank you. Question 2. Can you walk me through your Onboarding process how they treated you?
   </Say>
   <Pause length="10"/>
   <Say voice="Polly.Joanna" rate="90%">
-    Great. Question 3. Tell me about a time you optimized a slow SQL query or pipeline.
-    What was the problem and how did you fix it?
-  </Say>
-  <Pause length="10"/>
-  <Say voice="Polly.Joanna" rate="90%">
-    Question 4. What is your experience with Apache Airflow?
-    Have you written DAGs and managed pipeline failures?
+    Question 4. why are you planning to take a car instead of bycycle?
   </Say>
   <Pause length="10"/>
   <Say voice="Polly.Joanna" rate="90%">
@@ -64,11 +55,11 @@ TWIML_SCRIPT = """
   </Say>
   <Pause length="10"/>
   <Say voice="Polly.Joanna" rate="90%">
-    Wonderful, Sai Deva! Thank you so much for your time today.
-    Based on your responses, our recruiting team will follow up within 2 business days
-    to schedule a technical interview.
+    Wonderful, Dananjaya! Thank you so much for your time today.
+    Based on your responses, our team will follow up within 2 business days
+    to schedule a interview and let you know Bycycle or Car, let's discuss.
     You will receive a calendar invite at your registered email address.
-    Have a great afternoon and we look forward to speaking with you again!
+    Have a great evening and we look forward to speaking with you again!
   </Say>
   <Pause length="1"/>
 </Response>"""

@@ -1,0 +1,21 @@
+employee_id,first_name,last_name,email,department,job_title,employment_type,hire_date,termination_date,employment_status,manager_id,location,salary,last_modified_date
+EMP001,James,Carter,james.carter@company.com,Engineering,Senior Software Engineer,Full-Time,2019-03-15,,Active,EMP010,Metuchen NJ,120000,2026-01-10
+EMP002,Priya,Sharma,priya.sharma@company.com,Human Resources,HR Manager,Full-Time,2018-07-01,,Active,EMP010,Metuchen NJ,95000,2026-01-10
+EMP003,Marcus,Williams,marcus.williams@company.com,Talent Acquisition,Recruiter,Full-Time,2021-05-10,,Active,EMP002,Metuchen NJ,72000,2026-02-01
+EMP004,Lisa,Chen,lisa.chen@company.com,Finance,Senior Accountant,Full-Time,2020-01-20,,Active,EMP011,Metuchen NJ,88000,2026-01-10
+EMP005,Robert,Johnson,robert.johnson@company.com,Operations,Project Manager,Full-Time,2017-09-12,,Active,EMP012,Metuchen NJ,105000,2026-03-15
+EMP006,Anita,Patel,anita.patel@company.com,Talent Acquisition,Senior Recruiter,Full-Time,2020-11-03,,Active,EMP002,Metuchen NJ,82000,2026-01-10
+EMP007,David,Kim,david.kim@company.com,Operations,Database Engineer,Full-Time,2022-06-15,,Active,EMP012,Metuchen NJ,98000,2026-07-01
+EMP008,Sarah,Thompson,sarah.thompson@company.com,Finance,Financial Analyst,Full-Time,2021-08-22,,Active,EMP011,Metuchen NJ,76000,2026-01-10
+EMP009,Carlos,Rivera,carlos.rivera@company.com,Engineering,Data Engineer,Full-Time,2023-01-09,,Active,EMP010,Metuchen NJ,110000,2026-05-20
+EMP010,Jennifer,Walsh,jennifer.walsh@company.com,Engineering,VP Engineering,Full-Time,2015-04-01,,Active,,Metuchen NJ,180000,2026-01-10
+EMP011,Michael,Torres,michael.torres@company.com,Finance,CFO,Full-Time,2014-06-15,,Active,,Metuchen NJ,220000,2026-01-10
+EMP012,Rachel,Brown,rachel.brown@company.com,Operations,VP Operations,Full-Time,2016-02-28,,Active,,Metuchen NJ,195000,2026-01-10
+EMP013,Kevin,Lee,kevin.lee@company.com,Talent Acquisition,Recruiter,Full-Time,2022-09-01,,Active,EMP002,Metuchen NJ,68000,2026-04-01
+EMP014,Nicole,Adams,nicole.adams@company.com,Operations,Business Analyst,Full-Time,2021-03-15,,Active,EMP012,Metuchen NJ,82000,2026-01-10
+EMP015,Thomas,Harris,thomas.harris@company.com,Engineering,Cloud Architect,Full-Time,2019-11-01,2025-12-31,Terminated,EMP010,Metuchen NJ,135000,2025-12-31
+EMP016,Amy,Nelson,amy.nelson@company.com,Human Resources,HR Coordinator,Full-Time,2023-05-15,,Active,EMP002,Metuchen NJ,58000,2026-01-10
+EMP017,Brian,Scott,brian.scott@company.com,Finance,Accounts Receivable Specialist,Full-Time,2022-02-14,,Active,EMP011,Metuchen NJ,65000,2026-06-01
+EMP018,Diana,Martinez,diana.martinez@company.com,Operations,Consultant,Contract,2024-01-08,,Active,EMP012,Remote,90000,2026-03-01
+EMP019,Frank,Wilson,frank.wilson@company.com,Operations,Consultant,Contract,2024-03-01,,Active,EMP012,Remote,95000,2026-03-01
+EMP020,Grace,Taylor,grace.taylor@company.com,Talent Acquisition,TA Coordinator,Full-Time,2024-07-15,,Active,EMP002,Metuchen NJ,55000,2026-07-15

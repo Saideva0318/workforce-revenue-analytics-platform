@@ -1,0 +1,37 @@
+# Recruitment Agent Configuration
+agent_name: "Recruitment AI Agent"
+version: "1.0.0"
+
+# Screening Settings
+screening_threshold: 0.7  # Minimum match score for interview recommendation
+auto_schedule_interviews: true
+auto_send_rejection_emails: false
+
+# Notification Settings
+notification_email: "ta-team@company.com"
+slack_webhook_url: null  # Optional: Add Slack webhook for notifications
+
+# AI Model Settings
+ai_model: "gpt-4"
+ai_temperature: 0.3
+
+# Database Connection (optional)
+database:
+  host: "analytics-db.snowflakecomputing.com"
+  database: "ANALYTICS_DB"
+  schema: "RECRUITING"
+  warehouse: "COMPUTE_WH"
+
+# Job Board Integration (optional)
+job_boards:
+  - name: "LinkedIn"
+    enabled: true
+  - name: "Indeed"
+    enabled: false
+  - name: "Greenhouse"
+    enabled: false
+
+# Logging
+log_level: "INFO"  # DEBUG, INFO, WARNING, ERROR
+log_to_file: true
+log_file_path: "./logs/recruitment_agent.log"

@@ -48,21 +48,21 @@ TWIML_SCRIPT = """
     Great. Question 3. Tell me about a time you optimized a slow SQL query or pipeline.
     What was the problem and how did you fix it?
   </Say>
-  <Pause length="10"/>
+  <Pause length="12"/>
   <Say voice="Polly.Joanna" rate="90%">
     Question 4. What is your experience with Apache Airflow?
     Have you written DAGs and managed pipeline failures?
   </Say>
-  <Pause length="10"/>
+  <Pause length="12"/>
   <Say voice="Polly.Joanna" rate="90%">
     Question 5. Are you open to hybrid or on-site work in New Jersey?
     And what is your current work authorization status?
   </Say>
-  <Pause length="10"/>
+  <Pause length="12"/>
   <Say voice="Polly.Joanna" rate="90%">
     Last question. What is your expected salary range for a Senior Data Engineer role?
   </Say>
-  <Pause length="10"/>
+  <Pause length="12"/>
   <Say voice="Polly.Joanna" rate="90%">
     Wonderful, Sai Deva! Thank you so much for your time today.
     Based on your responses, our recruiting team will follow up within 2 business days
